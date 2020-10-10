@@ -5,4 +5,11 @@
  */
 export function invertObj(obj) {
 
+
+  if(!obj) return ;
+
+  return Object.entries(obj).reduce((accum, [key, value]) => {
+    accum[value] = key;
+    return accum;
+  }, {})
 }
